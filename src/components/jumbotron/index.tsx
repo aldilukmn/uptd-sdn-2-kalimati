@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 function Jumbotron() {
   return (
     <>
-      <section className='w-2/3'>
+      <section className='md:w-2/3'>
         <Swiper
           spaceBetween={30}
           effect={'fade'}
