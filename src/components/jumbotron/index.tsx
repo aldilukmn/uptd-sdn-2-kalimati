@@ -26,16 +26,16 @@ function Jumbotron() {
           className='mySwipper rounded-xl'
         >
           <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717919656/uptd%20sdn%202%20kalimati/images/qvigsd6pcxg48hqa9c88.jpg' />
+            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922664/uptd%20sdn%202%20kalimati/images/g7kh0tjwrhyqjahl00w6.jpg' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717919666/uptd%20sdn%202%20kalimati/images/vayztqincwtigzwacazu.jpg' />
+            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922815/uptd%20sdn%202%20kalimati/images/utcqlqdnrczllz65jvdb.jpg' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717919671/uptd%20sdn%202%20kalimati/images/fitgkhekedvfkr4akhsa.jpg' />
+            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922854/uptd%20sdn%202%20kalimati/images/eicyvvft67tfhzg3daif.jpg' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717919673/uptd%20sdn%202%20kalimati/images/r3orqu23mmmgbms0nwtb.jpg' />
+            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922899/uptd%20sdn%202%20kalimati/images/msyaiwco44xf9ig3qd91.jpg' />
           </SwiperSlide>
         </Swiper>
       </section>
