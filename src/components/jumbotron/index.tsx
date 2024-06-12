@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Skeleton from 'react-loading-skeleton';
+import { jumbotronImage } from './data';
 
 function Jumbotron() {
   return (
@@ -25,18 +27,18 @@ function Jumbotron() {
           modules={[Autoplay, EffectFade, Navigation, Pagination]}
           className='mySwipper rounded-xl'
         >
-          <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922664/uptd%20sdn%202%20kalimati/images/g7kh0tjwrhyqjahl00w6.jpg' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922815/uptd%20sdn%202%20kalimati/images/utcqlqdnrczllz65jvdb.jpg' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922854/uptd%20sdn%202%20kalimati/images/eicyvvft67tfhzg3daif.jpg' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src='https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717922899/uptd%20sdn%202%20kalimati/images/msyaiwco44xf9ig3qd91.jpg' />
-          </SwiperSlide>
+          {
+            jumbotronImage.map((value, index) => (
+              <>
+                <SwiperSlide key={index}>
+                  {
+                    <img src={value.image} /> ||
+                    <Skeleton style={{ height: '75vh' }}/>
+                  }
+                </SwiperSlide>
+              </>
+            ))
+          }
         </Swiper>
       </section>
     </>
