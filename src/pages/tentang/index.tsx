@@ -4,11 +4,11 @@ function Tentang() {
   return (
     <>
       <div className="text-white">
-        <section className="mt-8 bg-blue rounded-xl p-4 lg:w-2/4 mx-auto">
+        <section className="mt-8 mb-5 bg-blue rounded-xl p-4 lg:w-2/4 mx-auto">
           <h1 className="text-2xl mb-2">Tentang</h1>
           <p>Website ini dikelola oleh Tenaga Administrasi Sekolah atau Operator. Jika ada kritik dan saran dapat menghubungi nomor kontak di bawah ini. Terima Kasih.</p>
         </section>
-        <section className="mt-8 bg-green rounded-xl p-4 lg:w-2/4 mx-auto">
+        <section className="mt-8 mb-5 bg-green rounded-xl p-4 lg:w-2/4 mx-auto">
           <h1 className="text-2xl mb-2">Kontak</h1>
           <figcaption className='flex items-center gap-2 mb-3'>
             <Icon icon="ic:baseline-whatsapp" width={20} />

@@ -1,5 +1,5 @@
 import Skeleton from "react-loading-skeleton"
-import { identitasGuru } from "./data"
+import { misi, visi } from "./data"
 
 function Profil() {
   return (
@@ -14,16 +14,37 @@ function Profil() {
           </section>
         </div>
         <section className="bg-green text-white rounded-xl p-5 mb-20">
-          <h3 className="text-2xl text-center mb-2">VISI</h3>
-          <p className="mb-5 border-b pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ut omnis deleniti magnam, nam quos rem consequuntur itaque laboriosam inventore, harum dolorum reprehenderit culpa pariatur necessitatibus fugit esse non vel sit temporibus voluptate veritatis soluta sint facilis. Consequatur sunt dicta, molestias accusantium totam omnis magnam ipsum doloribus quae corporis tenetur.</p>
-          <h3 className="text-2xl text-center mb-2">MISI</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, similique.</p>
-          <ol style={{ listStyle: 'decimal' }} className="md:ml-4">
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nesciunt.</li>
+          <h3 className="text-4xl text-center mb-2">VISI</h3>
+          <p className=" text-lg">
+            {
+              visi[0]?.visi
+            }
+            <ol className="list-decimal ml-4">
+              {
+                visi[0].point.map((value, index) => (
+                  <>
+                    <li key={index}>
+                      {value.desc}
+                    </li>
+                  </>
+                ))
+              }
+            </ol>
+          </p>
+        </section>
+        <section className="bg-green text-white rounded-xl p-5 mb-20">
+          <h3 className="text-4xl text-center mb-2">MISI</h3>
+          <ol className="text-lg list-decimal ml-4">
+            {
+              misi.map((value, index) => (
+                <li key={index}>
+                  {value.misi}
+                </li>
+              ))
+            }
           </ol>
         </section>
-        <div>
+        {/* <div>
           <h3 className="text-center font-bold text-3xl mb-10">Guru dan Tenaga Kependidikan</h3>
           <img src="https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941113/uptd%20sdn%202%20kalimati/images/es3ac6l8ugoum9jeijmp.png" alt="kepala-sekolah" className="rounded-full border-4 border-gray-300 mx-auto mb-2" width={200} />
           <figcaption className="text-center">
@@ -47,7 +68,7 @@ function Profil() {
               ))
             }
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )
