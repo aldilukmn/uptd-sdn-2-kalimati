@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'patrick-hand': [
-          'Patrick Hand',
+        'quicksand': [
+          'Quicksand',
           'sans-serif'
         ],
       },
