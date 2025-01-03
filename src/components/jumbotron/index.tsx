@@ -32,8 +32,11 @@ function Jumbotron() {
               <>
                 <SwiperSlide key={index}>
                   {
-                    <img src={value.image} /> ||
-                    <Skeleton style={{ height: '75vh' }}/>
+                    value.image ? (
+                       <img src={value.image} /> 
+                      ) : (
+                        <Skeleton style={{ height: '75vh' }}/>
+                      )
                   }
                 </SwiperSlide>
               </>
