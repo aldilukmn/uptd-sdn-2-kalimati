@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Skeleton from 'react-loading-skeleton';
 import { jumbotronImage } from './data';
+import { Skeleton } from '@mui/material';
 
 function Jumbotron() {
   return (
@@ -29,17 +29,15 @@ function Jumbotron() {
         >
           {
             jumbotronImage.map((value, index) => (
-              <>
-                <SwiperSlide key={index}>
-                  {
-                    value.image ? (
-                       <img src={value.image} /> 
-                      ) : (
-                        <Skeleton style={{ height: '75vh' }}/>
-                      )
-                  }
-                </SwiperSlide>
-              </>
+              <SwiperSlide key={index}>
+                {
+                  value.image ? (
+                      <img src={value.image} /> 
+                    ) : (
+                      <Skeleton style={{ height: '75vh' }}/>
+                    )
+                }
+              </SwiperSlide>
             ))
           }
         </Swiper>

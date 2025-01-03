@@ -1,5 +1,9 @@
 import { IdentitasGuruType, MisiType, VisiType } from "./types";
 
+export const logoUrl: string = "https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717920310/uptd%20sdn%202%20kalimati/svg/vapqm0latukpxjjawzfu.svg"
+
+export const profilDesc: string = "UPTD SD Negeri 2 Kalimati merupakan Sekolah Dasar yang berlokasi di Blok Beringin Desa Kalimati Kecamatana Jatibarang Kabupaten Indramayu Provinsi Jawa Barat dengan kode pos 45273. Sekolah Dasar yang dikepalai oleh Ibu Dewi Arti Handayani, S.Pd.SD. dan Guru yang berjumlah 7 orang serta Tenaga Administrasi dan Penjaga Sekolah. Selain itu, siswa/i di UPTD SD Negeri 2 Kalimati berjumlah 114 siswa/i."
+
 export const identitasGuru: IdentitasGuruType[] = [
   {
     status: 'GURU KELAS IV',

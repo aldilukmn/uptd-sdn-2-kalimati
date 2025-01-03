@@ -4,7 +4,8 @@ function Footer() {
   return (
     <>
       <section className="bg-black text-white text-center py-16">
-        <h3>Copyright &copy; {currentYear} || UPTD SDN 2 Kalimati</h3>
+        <h2 className="text-xl font-semibold">UPTD SDN 2 Kalimati</h2>
+        <h3>Copyright &copy; {currentYear}</h3>
       </section>
     </>
   )

@@ -1,39 +1,52 @@
-import Skeleton from "react-loading-skeleton"
-import { misi, visi } from "./data"
+import Skeleton from '@mui/material/Skeleton';
+import { logoUrl, misi, profilDesc, visi } from "./data"
+import { Stack } from '@mui/material';
 
 function Profil() {
   return (
     <>
-      <div className="my-10">
+      <div className="my-10 text-justify">
         <div className="lg:flex gap-10 mb-20">
-          {<img src="https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717920310/uptd%20sdn%202%20kalimati/svg/vapqm0latukpxjjawzfu.svg" alt="logo" width={300} className="mx-auto lg:mb-0 mb-10" /> || <Skeleton style={{ width: '50vh', height: '40vh' }}/>}
-          <section className="bg-blue text-white p-4 rounded-xl">
+          <figure className={`w-1/6 ${logoUrl ? 'self-center' : ''}`}>
+            { logoUrl ? 
+            (
+              <img src={logoUrl} alt="logo" className="mx-auto lg:mb-0 mb-10" />
+            ) : (
+              <Skeleton variant="circular" height="100%"/>
+            )}
+          </figure>
+          <section className="bg-blue text-white p-4 rounded-xl w-full">
             <p className="text-xl">
-              UPTD SD Negeri 2 Kalimati merupakan Sekolah Dasar yang berlokasi di Blok Beringin Desa Kalimati Kecamatana Jatibarang Kabupaten Indramayu Jawa Barat. Sekolah Dasar yang dikepalai oleh Ibu Dewi Arti Handayani, S.Pd.SD. dan Guru yang berjumlah 8 orang serta Tenaga Administrasi dan Penjaga Sekolah. Selain itu, siswa/i di UPTD SD Negeri 2 Kalimati berjumlah 121 siswa/i.
+              {
+                profilDesc ? profilDesc : 
+                <Stack >
+                  {Array.from({ length: 4 }).map((_, index) => (
+                    <Skeleton key={index}/>
+                  ))}
+                </Stack>
+              }
             </p>
           </section>
         </div>
         <section className="bg-green text-white rounded-xl p-5 mb-20">
-          <h3 className="text-4xl text-center mb-2">VISI</h3>
+          <h3 className="text-3xl font-semibold text-center mb-5">VISI</h3>
           <p className=" text-lg">
             {
               visi[0]?.visi
             }
-            <ol className="list-decimal ml-4">
-              {
-                visi[0].point.map((value, index) => (
-                  <>
-                    <li key={index}>
-                      {value.desc}
-                    </li>
-                  </>
-                ))
-              }
-            </ol>
           </p>
+          <ol className="list-decimal ml-4">
+            {
+              visi[0].point.map((value, index) => (
+                <li key={index}>
+                  {value.desc}
+                </li>
+              ))
+            }
+          </ol>
         </section>
         <section className="bg-green text-white rounded-xl p-5 mb-20">
-          <h3 className="text-4xl text-center mb-2">MISI</h3>
+          <h3 className="text-3xl font-semibold text-center mb-2">MISI</h3>
           <ol className="text-lg list-decimal ml-4">
             {
               misi.map((value, index) => (
