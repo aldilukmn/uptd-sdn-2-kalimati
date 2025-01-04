@@ -19,7 +19,7 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "@iconify/react": "^5.0.1",
+    "@iconify/react": "^5.2.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

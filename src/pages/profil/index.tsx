@@ -7,12 +7,12 @@ function Profil() {
     <>
       <div className="my-10 text-justify">
         <div className="lg:flex gap-10 mb-20">
-          <figure className={`w-1/6 ${logoUrl ? 'self-center' : ''}`}>
+          <figure className={`lg:w-1/6 w-1/3 mx-auto ${logoUrl ? 'self-center' : ''}`}>
             { logoUrl ? 
             (
-              <img src={logoUrl} alt="logo" className="mx-auto lg:mb-0 mb-10" />
+              <img src={logoUrl} alt="logo" className=" lg:mb-0 mb-10" />
             ) : (
-              <Skeleton variant="circular" height="100%"/>
+              <Skeleton variant="circular" height={150} width={150} className='lg:mb-0 mb-10' />
             )}
           </figure>
           <section className="bg-blue text-white p-4 rounded-xl w-full">
