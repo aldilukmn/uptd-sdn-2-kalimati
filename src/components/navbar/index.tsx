@@ -31,7 +31,7 @@ function Navbar() {
             <div onClick={handleClick}>
               <>
                 <Icon icon="material-symbols:menu-rounded" className="cursor-pointer" width="36" />
-                <div className={`flex flex-col absolute bg-black text-white bottom-0 -top-10 right-0 pr-32 pl-8 pt-24 z-50 gap-10 transition-all duration-300 ease-in-out ${isNav ? '' : '-right-96'}`}>
+                <div className={`flex flex-col absolute bg-black text-white bottom-0 -top-10  pr-32 pl-8 pt-24 z-50 gap-10 transition-all duration-300 ease-in-out ${isNav ? 'right-0' : '-right-96'}`}>
                   <Navlink to="/" children="Beranda"/>
                   <Navlink to="/profil" children="Profil" className="w-12"/>
                   <Navlink to="/tentang" children="Tentang"/>
