@@ -1,6 +1,6 @@
 import Skeleton from '@mui/material/Skeleton';
-import { logoUrl, misi, profilDesc, visi } from "./data"
 import { Stack } from '@mui/material';
+import { logoUrl, misi, profilDesc, visi } from './data';
 
 function Profil() {
   return (

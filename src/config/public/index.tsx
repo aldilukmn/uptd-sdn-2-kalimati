@@ -4,7 +4,7 @@ import Footer from '../../components/footer'
 
 function Public() {
   return (
-    <div className='relative overflow-x-hidden'>
+    <div className='relative overflow-x-hidden max-w-[1450px] mx-auto'>
       <div className='bg-white lg:mx-14 mx-10 mt-10 mb-20 font-quicksand'>
         <Navbar/>
         <Outlet/>

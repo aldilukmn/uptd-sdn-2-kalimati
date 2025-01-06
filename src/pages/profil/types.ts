@@ -1,10 +1,3 @@
-export interface IdentitasGuruType {
-  status: string
-  nama: string
-  nip: string
-  foto: string
-}
-
 export interface VisiType {
   visi: string
   point: Array<{

@@ -25,6 +25,7 @@ function Navbar() {
             <>
               <Navlink to="/" children="Beranda"/>
               <Navlink to="/profil" children="Profil"/>
+              <Navlink to="/gtk" children="GTK"/>
               <Navlink to="/tentang" children="Tentang"/>
             </>
             ) : (
@@ -34,6 +35,7 @@ function Navbar() {
                 <div className={`flex flex-col absolute bg-black text-white bottom-0 -top-10  pr-32 pl-8 pt-24 z-50 gap-10 transition-all duration-300 ease-in-out ${isNav ? 'right-0' : '-right-96'}`}>
                   <Navlink to="/" children="Beranda"/>
                   <Navlink to="/profil" children="Profil" className="w-12"/>
+                  <Navlink to="/gtk" children="GTK" className="w-9"/>
                   <Navlink to="/tentang" children="Tentang"/>
                 </div>
                 <span className={`bg-black absolute left-0 right-0 -top-10 bottom-0 z-40 ${isNav ? 'opacity-50' : 'hidden'}`}></span>

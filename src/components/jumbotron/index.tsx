@@ -29,12 +29,12 @@ function Jumbotron() {
         >
           {
             jumbotronImage.map((value, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className='h-auto'>
                 {
                   value.image ? (
                       <img src={value.image} /> 
                     ) : (
-                      <Skeleton style={{ height: '75vh' }}/>
+                      <Skeleton style={{height: "98vh"}}/>
                     )
                 }
               </SwiperSlide>

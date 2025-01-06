@@ -3,6 +3,7 @@ import Home from "../../pages/home";
 import Profil from "../../pages/profil";
 import Tentang from "../../pages/tentang";
 import Public from "../public";
+import Gtk from "../../pages/gtk";
 
 const routers = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const routers = createBrowserRouter([
       {
         path: '/profil',
         element: <Profil/>
+      },
+      {
+        path: '/gtk',
+        element: <Gtk/>
       },
       {
         path: '/tentang',
