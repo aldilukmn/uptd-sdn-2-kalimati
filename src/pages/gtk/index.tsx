@@ -18,10 +18,10 @@ function Gtk() {
       <section>
         <h1 className="font-bold text-2xl text-center mt-10 mb-10">Guru dan Tenaga Kependidikan</h1>
         <div className="mb-5 w-80 mx-auto text-white" onClick={toggleHead}>
-          <h3 className={`bg-blue text-center py-3 rounded-t-md cursor-pointer font-semibold text-xl ${isHead ? 'rounded-t-md' : 'rounded-md'}`}>KEPALA SEKOLAH</h3>
+          <h3 className={`bg-blue text-center py-3 rounded-t-md cursor-pointer font-semibold text-xl transition-all duration-500 ease-in-out ${isHead ? 'rounded-t-md' : 'rounded-md'}`}>KEPALA SEKOLAH</h3>
           <div className={`overflow-hidden transition-all duration-500 ease-in-out bg-blue-soft flex flex-col items-center ${isHead ? 'max-h-dvh py-5 opacity-100 rounded-b-md' : 'max-h-0 opacity-0'}`}>
             <img src="https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941113/uptd%20sdn%202%20kalimati/images/es3ac6l8ugoum9jeijmp.png" alt="Kepala Sekolah" width={125} className="rounded-full mx-auto mb-5" />
-            <h4 className=" tracking-wide">Dewi Arti Handayani, S.Pd.SD.</h4>
+            <h4 className="tracking-wide">DEWI ARTI HANDAYANI, S.Pd.SD.</h4>
             <h4>NIP. 19730330 200701 2 005</h4>
           </div>
         </div>
