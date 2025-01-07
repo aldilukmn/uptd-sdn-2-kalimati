@@ -33,7 +33,7 @@ export const identityGtk: IdentityGtkType[] = [
   },
   {
     status: 'GURU KELAS VI',
-    name: 'DARMJAI, S.Pd.SD.',
+    name: 'DARMAJI, S.Pd.SD.',
     nip: '19660410 198803 1 015',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941112/uptd%20sdn%202%20kalimati/images/vbow6rbpnidw2antfbh9.png'
   },
