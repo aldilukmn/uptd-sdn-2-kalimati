@@ -3,4 +3,8 @@ export interface IdentityGtkType {
   name: string
   nip: string
   photo: string
+  totalStudent?: {
+    male: number
+    female: number
+  }
 }
