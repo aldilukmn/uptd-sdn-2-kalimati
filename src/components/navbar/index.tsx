@@ -12,7 +12,7 @@ function Navbar() {
   }
   return (
     <>
-      <section className="flex justify-between lg:px-20 border-b-2 pb-5 font-semibold items-center">
+      <section className="flex justify-between lg:px-16 md:px-10 border-b-2 pb-5 font-semibold items-center">
         {/* <h1 className="text-3xl">UPTD SDN 2 KALIMATI</h1> */}
         <figure>
           <Link to={"/"}>
@@ -21,7 +21,7 @@ function Navbar() {
         </figure>
         <div className="flex gap-10 tracking-widest">
           {
-            width > 1024 ? (
+            width > 768 ? (
             <>
               <Navlink to="/" children="Beranda"/>
               <Navlink to="/profil" children="Profil"/>
