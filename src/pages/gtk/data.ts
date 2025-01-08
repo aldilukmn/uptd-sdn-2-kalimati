@@ -68,6 +68,12 @@ export const identityGtk: IdentityGtkType[] = [
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941112/uptd%20sdn%202%20kalimati/images/ikqtfz7avuqhgmnoqc9k.png'
   },
   {
+    status: 'GURU PJOK',
+    name: 'MUNIFAH, S.Pd.SD.',
+    nip: '-',
+    photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1704797865/dump/qbcvmsacyrwzlxexibwe.png',
+  },
+  {
     status: 'PENJAGA',
     name: 'WIRYAD',
     nip: '-',

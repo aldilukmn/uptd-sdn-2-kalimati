@@ -15,7 +15,7 @@ const Navlink: React.FC<NavLinkProps> = ({to, children, className}) => {
   return (
     <Link to={to} className={`relative group ${className}`}>
       {children}
-      <span className={`absolute left-0 -bottom-1 w-0 transition-all duration-300 h-1 rounded opacity-75 ${isActive ? 'w-full' : 'group-hover:w-full'} ${width > 1024 ? 'bg-black' : 'bg-white'}`}></span>
+      <span className={`absolute left-0 -bottom-1 w-0 transition-all duration-300 h-1 rounded opacity-75 ${isActive ? 'w-full' : 'group-hover:w-full'} ${width > 768 ? 'bg-black' : 'bg-white'}`}></span>
     </Link>
   )
 }
