@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Navlink from "./navlink"
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { screenSize } from "../../libs/screenSize"
+import { screenSize } from "../../libs/modules/screenSize"
 import { useState } from "react";
 
 function Navbar() {

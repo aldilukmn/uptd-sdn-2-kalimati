@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { formatTime } from '../../libs/formatTime'
-import { formatDate } from '../../libs/formatDate';
+import { formatTime } from '../../libs/modules/formatTime'
+import { formatDate } from '../../libs/modules/formatDate';
 
 function Time() {
   const [currentTime, setCurrentTime] = useState(new Date());

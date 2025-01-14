@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Location, useLocation } from "react-router-dom"
-import { screenSize } from "../../../libs/screenSize";
+import { screenSize } from "../../../libs/modules/screenSize";
 
 interface NavLinkProps {
   to: string;
