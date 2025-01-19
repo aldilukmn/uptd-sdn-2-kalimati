@@ -74,7 +74,7 @@ function Gtk() {
         }
         {
           isLoading ? (
-            <Skeleton className="py-24"/>
+            <Skeleton className="py-40"/>
           ) : (
             <div className="text-white grid md:grid-cols-3 lg:grid-cols-4 gap-5">
             {
