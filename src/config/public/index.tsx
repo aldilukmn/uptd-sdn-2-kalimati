@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import Time from '../../components/time'
+import Navbar from '../../components/navbar/public'
 
 function Public() {
   return (

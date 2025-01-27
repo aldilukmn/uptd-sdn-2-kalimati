@@ -2,12 +2,19 @@ import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { setIsLoading } from "../../redux/action/isLoading";
+import UserType from "./type";
+import LoginUser from "./loginContext";
+import { toast, ToastContainer } from "react-toastify";
+import { firstCapitalizeWord } from "../../libs";
+import { useNavigate } from "react-router-dom";
+import { setToastMessage } from "../../redux/action/toast";
 
 function Login() {
   const dispatch = useDispatch<AppDispatch>();
   const isLoading = useSelector((state: RootState) => state.isLoadingReducer.isLoading);
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const navigate = useNavigate();
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -25,9 +32,28 @@ function Login() {
     dispatch(setIsLoading(true));
     try {
       e.preventDefault();
-      await new Promise((res) => setTimeout(res, 3000))
-    } catch (error) {
-      console.log('ok', 'loading berhasil')
+      const payload: UserType = {
+        username,
+        password
+      };
+      const response = await LoginUser.doLogin(payload);
+
+      if (response.status.code === 400) {
+        throw new Error(response.status.message);
+      }
+      dispatch(setToastMessage(response.status.message));
+      const isToken = response.result as string;
+      localStorage.setItem('access_token', isToken);
+      navigate('/dashboard');
+      console.log('ok')
+    } catch (e) {
+      if (e instanceof Error) {
+        toast.error(firstCapitalizeWord(e.message), {
+          position: "top-right",
+          autoClose: 2000,
+          closeButton: false
+        });
+      }
     } finally {
       dispatch(setIsLoading(false));
     }
@@ -44,6 +70,7 @@ function Login() {
         <label htmlFor="password" className="block text-start mb-2 font-semibold tracking-widest text-white border-b-2 w-fit ">Password</label>
         <input placeholder="Password" id="password" name="password" type="password" className="w-full p-2 tracking-widest rounded-md outline-blue-soft mb-8" onChange={handleOnChange} value={password}></input>
         <button className={`w-full py-2 rounded-md tracking-widest font-bold hover:bg-gray-200 ${!username || !password || isLoading ? 'cursor-not-allowed bg-gray-200' : 'bg-white'}`} disabled={!username || !password || isLoading}>{isLoading ? 'Loading ...' : 'Login'}</button>
+      <ToastContainer />
       </form>
     </>
   )

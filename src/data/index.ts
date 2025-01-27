@@ -1,3 +1,3 @@
-import DataGtk from "./getGtk";
+import DataGtk from "./gtk";
 
 export { DataGtk };

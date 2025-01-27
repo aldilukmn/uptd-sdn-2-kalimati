@@ -1,6 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Public from "../public";
 import { Gtk, Home, Login, NotFound, Profil, Tentang } from "../../pages";
+import Private from "../private";
+import { Dashboard } from "../../pages/private";
 
 const routers = createBrowserRouter([
   {
@@ -31,6 +33,15 @@ const routers = createBrowserRouter([
         element: <NotFound/>
       }
     ],
+  },
+  {
+    element: <Private/>,
+    children: [
+      {
+        path: '/dashboard',
+        element: <Dashboard/>
+      }
+    ]
   }
 ])
 

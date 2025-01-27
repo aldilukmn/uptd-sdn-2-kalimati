@@ -1,4 +1,4 @@
-import { DefaultResponse } from "../models";
+import { DefaultGtkResponse } from "../../models";
 
 export default class DataGtk {
   static baseUrl: string = 'https://api-uptdsdn2kalimati.vercel.app/api/v1/gtk';
@@ -12,7 +12,7 @@ export default class DataGtk {
           'Content-Type': 'application/json',
         }
       });
-    const data: DefaultResponse = await response.json();
+    const data: DefaultGtkResponse = await response.json();
     return data;
   }
 }

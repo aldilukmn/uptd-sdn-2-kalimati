@@ -3,7 +3,7 @@ export interface IdentityGtkType {
   name: string
   nip: string
   photo: string
-  totalStudent?: {
+  total_student?: {
     male: number
     female: number
   }

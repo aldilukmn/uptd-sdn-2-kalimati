@@ -1,14 +1,14 @@
-interface GtkResponse {
+interface GtkEntity {
   status: string;
   name: string;
   nip: string;
   class_gtk: string;
   image_url: string;
   image_id: string;
-  totalStudent: {
+  total_student: {
     male: number;
     female: number;
   }
 }
 
-export type { GtkResponse };
+export type { GtkEntity };
