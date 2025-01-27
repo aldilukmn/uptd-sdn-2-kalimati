@@ -6,7 +6,7 @@ export const identityGtk: IdentityGtkType[] = [
     name: 'NUR ANISAH FITRIYANTI, S.Pd.I.',
     nip: '-',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941114/uptd%20sdn%202%20kalimati/images/msd6hks4szjffwvql4b4.png',
-    totalStudent: {
+    total_student: {
       male: 7,
       female: 13
     }
@@ -16,7 +16,7 @@ export const identityGtk: IdentityGtkType[] = [
     name: 'Hj. TETI JUHARTINI, S.Pd.',
     nip: '19650513 198603 2 016',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941113/uptd%20sdn%202%20kalimati/images/j3vloim5ttedcxgawicl.png',
-    totalStudent: {
+    total_student: {
       male: 13,
       female: 9
     }
@@ -26,7 +26,7 @@ export const identityGtk: IdentityGtkType[] = [
     name: 'ALDI LUKMAN MAULANA L.',
     nip: '-',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941113/uptd%20sdn%202%20kalimati/images/daslzxhgcelmo3uvijjw.png',
-    totalStudent: {
+    total_student: {
       male: 8,
       female: 10
     }
@@ -36,7 +36,7 @@ export const identityGtk: IdentityGtkType[] = [
     name: 'NURWATI, S.Pd.',
     nip: '-',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941115/uptd%20sdn%202%20kalimati/images/gaba4lpruxyop9ikmc8r.png',
-    totalStudent: {
+    total_student: {
       male: 7,
       female: 10
     }
@@ -46,7 +46,7 @@ export const identityGtk: IdentityGtkType[] = [
     name: 'NURYANI, S.Pd.SD.',
     nip: '19700317 200701 1 006',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941112/uptd%20sdn%202%20kalimati/images/bdck6sug5q0ky3xdefnp.png',
-    totalStudent: {
+    total_student: {
       male: 9,
       female: 12
     }
@@ -56,7 +56,7 @@ export const identityGtk: IdentityGtkType[] = [
     name: 'DARMAJI, S.Pd.SD.',
     nip: '19660410 198803 1 015',
     photo: 'https://res.cloudinary.com/dhtfq9yw8/image/upload/v1717941112/uptd%20sdn%202%20kalimati/images/vbow6rbpnidw2antfbh9.png',
-    totalStudent: {
+    total_student: {
       male: 8,
       female: 8
     }
