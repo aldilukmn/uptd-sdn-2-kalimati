@@ -5,10 +5,9 @@ import Navbar from '../../components/navbar/public'
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import { useEffect } from 'react';
-import { firstCapitalizeWord } from '../../libs';
-import { toast } from 'react-toastify';
 import { setToastMessage } from '../../redux/action/toast';
 import LocalStorage from '../localStorage';
+import { showToast } from '../../helpers';
 
 function Public() {
   const dispatch = useDispatch<AppDispatch>();
@@ -16,12 +15,7 @@ function Public() {
   const getToken: string = LocalStorage.getToken;
   useEffect(() => {
     if (toastMessage) {
-      toast.success(firstCapitalizeWord(toastMessage), {
-        position: "top-right",
-        autoClose: 2000,
-        closeButton: false,
-        className: 'w-fit'
-      });
+      showToast(toastMessage, 'success');
       dispatch(setToastMessage(null));
     }
   }, [toastMessage, dispatch, getToken])

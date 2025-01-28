@@ -9,6 +9,7 @@ import { firstCapitalizeWord } from "../../libs";
 import { useNavigate } from "react-router-dom";
 import { setToastMessage } from "../../redux/action/toast";
 import LocalStorage from "../../config/localStorage";
+import { showToast } from "../../helpers";
 
 function Login() {
   const dispatch = useDispatch<AppDispatch>();
@@ -48,12 +49,7 @@ function Login() {
       navigate('/dashboard');
     } catch (e) {
       if (e instanceof Error) {
-        toast.error(firstCapitalizeWord(e.message), {
-          position: "top-right",
-          autoClose: 2000,
-          closeButton: false,
-          className: 'w-fit'
-        });
+        showToast(firstCapitalizeWord(e.message), 'error')
       }
     } finally {
       dispatch(setIsLoading(false));
