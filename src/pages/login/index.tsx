@@ -4,7 +4,6 @@ import { AppDispatch, RootState } from "../../redux/store";
 import { setIsLoading } from "../../redux/action/isLoading";
 import UserType from "./type";
 import LoginUser from "./loginContext";
-import { toast } from "react-toastify";
 import { firstCapitalizeWord } from "../../libs";
 import { useNavigate } from "react-router-dom";
 import { setToastMessage } from "../../redux/action/toast";
