@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Location, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import Footer from '../../components/footer'
 import Time from '../../components/time'
 import Navbar from '../../components/navbar/public'
@@ -6,19 +6,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import { useEffect } from 'react';
 import { setToastMessage } from '../../redux/action/toast';
-import LocalStorage from '../localStorage';
 import { showToast } from '../../helpers';
 
 function Public() {
   const dispatch = useDispatch<AppDispatch>();
   const toastMessage  = useSelector((state: RootState) => state.toastReducer.message);
-  const getToken: string = LocalStorage.getToken;
+  const nameToken: string = 'access_token'
+  const getToken: boolean = !!localStorage.getItem(nameToken);
+  const location: Location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
+    if (getToken && location.pathname === '/login') {
+      navigate('/dashboard')
+    }
     if (toastMessage) {
       showToast(toastMessage, 'success');
       dispatch(setToastMessage(null));
     }
-  }, [toastMessage, dispatch, getToken])
+  }, [toastMessage, dispatch, getToken, location.pathname, navigate])
   return (
     <div className='relative overflow-x-hidden max-w-[1450px] mx-auto'>
       <Time/>

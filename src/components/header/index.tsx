@@ -25,8 +25,9 @@ function Header() {
   };
   const handleLogout = async () => {
     setAnchorEl(null);
-    const user = await  handleUser.doLogout(getToken);
+    const user = await handleUser.doLogout(getToken);
     dispatch(setToastMessage(user.status.message));
+    localStorage.clear();
     navigate('/login');
   }
   useEffect(() => {

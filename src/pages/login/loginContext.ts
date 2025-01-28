@@ -1,4 +1,3 @@
-import LocalStorage from "../../config/localStorage";
 import Methods from "../../config/methods";
 import { DefaultUserResponse } from "../../models";
 import UserType from "./type";
@@ -33,7 +32,6 @@ export default class handleUser {
         credentials: 'include'
       }
     )
-    LocalStorage.clear();
     const data: DefaultUserResponse = await response.json();
     return data;
   }

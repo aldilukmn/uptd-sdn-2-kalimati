@@ -11,12 +11,20 @@ const Protected: React.FC<ProtectedType> = ({children}) => {
     return <Navigate to='/login'/>
   }
 
-  const decoded: RoleType = jwtDecode(getToken);
-  const userTime: number = Number(decoded.exp) * 1000;
-  const currentTime: number = new Date().getTime();
-  if (currentTime > userTime) {
-    localStorage.clear();
-    return <Navigate to='/login'/>
+  try {
+    const decoded: RoleType = jwtDecode(getToken);
+    const userTime: number = Number(decoded.exp) * 1000;
+    const currentTime: number = new Date().getTime();
+    if (currentTime > userTime) {
+      localStorage.clear();
+      return <Navigate to='/login'/>
+    }
+  } catch (e) {
+    if (e instanceof Error) {
+      console.error("invalid token format", e.message);
+      localStorage.clear();
+      return <Navigate to='/login'/>;
+    }
   }
 
   return (

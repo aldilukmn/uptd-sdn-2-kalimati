@@ -7,6 +7,7 @@ import { screenSize } from "../../../libs";
 function Navbar() {
   const { width } = screenSize();
   const [isNav, setIsNav] = useState(false);
+  const getToken: boolean = !!localStorage.getItem('access_token');
   const handleClick = () => {
     setIsNav(!isNav)
   }
@@ -27,7 +28,7 @@ function Navbar() {
               <Navlink to="/profil" children="Profil" needHover={true}/>
               <Navlink to="/gtk" children="GTK" needHover={true}/>
               <Navlink to="/tentang" children="Tentang" needHover={true}/>
-              <Navlink to="/login" children="Login" className=" text-white px-5 py-2 rounded-md" needHover={false}/>
+              <Navlink to={`${getToken ? '/dashboard' : '/login' }`} children={`${getToken ? 'Dashboard' : 'Login' }`} className=" text-white px-5 py-2 rounded-md" needHover={false}/>
             </>
             ) : (
             <div onClick={handleClick}>
