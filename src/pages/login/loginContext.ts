@@ -1,11 +1,14 @@
+import LocalStorage from "../../config/localStorage";
+import Methods from "../../config/methods";
 import { DefaultUserResponse } from "../../models";
 import UserType from "./type";
 
-export default class LoginUser {
+export default class handleUser {
+  static baseUrl: string = 'https://api-uptdsdn2kalimati.vercel.app/api/v1';
   static async doLogin(payload: UserType): Promise<DefaultUserResponse> {
     const response = await fetch(
-      'https://api-uptdsdn2kalimati.vercel.app/api/v1/login', {
-        method: 'POST',
+      `${this.baseUrl}/login`, {
+        method: Methods.POST,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -17,6 +20,21 @@ export default class LoginUser {
       }
     );
     const data = await response.json();
+    return data;
+  }
+
+  static async doLogout (userToken: string) {
+    const response = await fetch(
+      `${this.baseUrl}/logout`, {
+        method: Methods.DELETE,
+        headers: {
+          'Authorization': `Bearer ${userToken}`
+        },
+        credentials: 'include'
+      }
+    )
+    LocalStorage.clear();
+    const data: DefaultUserResponse = await response.json();
     return data;
   }
 }

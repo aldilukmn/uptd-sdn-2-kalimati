@@ -4,6 +4,10 @@ import { RoleType } from "../../models";
 import { jwtDecode } from "jwt-decode";
 import { Button, Menu, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import handleUser from "../../pages/login/loginContext";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { setToastMessage } from "../../redux/action/toast";
 
 function Header() {
   const getToken = localStorage.getItem('access_token') as string;
@@ -12,14 +16,19 @@ function Header() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
-    localStorage.removeItem('access_token');
-    navigate('/login');
   };
+  const handleLogout = async () => {
+    setAnchorEl(null);
+    const user = await  handleUser.doLogout(getToken);
+    dispatch(setToastMessage(user.status.message));
+    navigate('/login');
+  }
   useEffect(() => {
     setUser(decodedUser.role);
   }, [decodedUser])
@@ -52,7 +61,7 @@ function Header() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleLogout} id="logout-btn">Logout</MenuItem>
       </Menu>
       </section>
     </>

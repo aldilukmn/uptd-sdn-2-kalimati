@@ -8,7 +8,6 @@ const Protected: React.FC<ProtectedType> = ({children}) => {
   const nameToken: string = 'access_token'
   const getToken: string = localStorage.getItem(nameToken) as string;
   if (!getToken) {
-    console.log(getToken)
     return <Navigate to='/login'/>
   }
 
@@ -16,7 +15,7 @@ const Protected: React.FC<ProtectedType> = ({children}) => {
   const userTime: number = Number(decoded.exp) * 1000;
   const currentTime: number = new Date().getTime();
   if (currentTime > userTime) {
-    localStorage.removeItem(nameToken);
+    localStorage.clear();
     return <Navigate to='/login'/>
   }
 

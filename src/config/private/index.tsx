@@ -6,7 +6,7 @@ import Protected from "../router/protected"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { AppDispatch, RootState } from "../../redux/store"
-import { toast, ToastContainer } from "react-toastify"
+import { toast } from "react-toastify"
 import { firstCapitalizeWord } from "../../libs"
 import { setToastMessage } from "../../redux/action/toast"
 
@@ -14,7 +14,7 @@ function Private() {
   const dispatch = useDispatch<AppDispatch>();
   const toastMessage  = useSelector((state: RootState) => state.toastReducer.message);
   useEffect(() => {
-    if (toastMessage ) {
+    if (toastMessage) {
       toast.success(firstCapitalizeWord(toastMessage), {
         position: "top-right",
         autoClose: 2000,
@@ -32,7 +32,6 @@ function Private() {
           <Outlet/>
         </div>
         <Footer/>
-        <ToastContainer/>
       </Protected>
     </>
   )

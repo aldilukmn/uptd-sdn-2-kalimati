@@ -1,3 +1,4 @@
+import Methods from "../../config/methods";
 import { DefaultUserResponse } from "../../models";
 
 export default class DataUser {
@@ -7,7 +8,7 @@ export default class DataUser {
     const response = await fetch(
       `${this.baseUrl}`,
       {
-        method: 'GET',
+        method: Methods.GET,
         headers: {
           'Authorization': `Bearer ${userToken}`
         }
