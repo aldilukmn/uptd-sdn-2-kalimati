@@ -19,7 +19,8 @@ function Public() {
       toast.success(firstCapitalizeWord(toastMessage), {
         position: "top-right",
         autoClose: 2000,
-        closeButton: false
+        closeButton: false,
+        className: 'w-fit'
       });
       dispatch(setToastMessage(null));
     }

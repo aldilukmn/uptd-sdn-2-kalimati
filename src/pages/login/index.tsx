@@ -51,7 +51,8 @@ function Login() {
         toast.error(firstCapitalizeWord(e.message), {
           position: "top-right",
           autoClose: 2000,
-          closeButton: false
+          closeButton: false,
+          className: 'w-fit'
         });
       }
     } finally {
