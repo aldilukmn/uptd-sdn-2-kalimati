@@ -34,12 +34,12 @@ function Navbar() {
             <div onClick={handleClick}>
               <>
                 <Icon icon="material-symbols:menu-rounded" className="cursor-pointer" width="36" />
-                <div className={`flex flex-col absolute bg-black text-white bottom-0 -top-10 pr-32 pl-8 pt-24 z-50 gap-10 transition-all duration-300 ease-in-out ${isNav ? 'right-0' : '-right-96'}`}>
-                  <Navlink to="/" children="Beranda" needHover={true}/>
+                <div className={`flex flex-col absolute bg-black text-white bottom-0 -top-10 md:pr-4 pr-20 pl-8 pt-24 z-50 gap-10 transition-all duration-300 ease-in-out ${isNav ? 'right-0' : '-right-full'}`}>
+                  <Navlink to="/" children="Beranda" needHover={true} className="w-[4.5rem]"/>
                   <Navlink to="/profil" children="Profil" needHover={true} className="w-12"/>
                   <Navlink to="/gtk" children="GTK" className="w-9" needHover={true}/>
-                  <Navlink to="/tentang" children="Tentang" needHover={true}/>
-                  <Navlink to="/login" children='Login' needHover={false} />
+                  <Navlink to="/tentang" children="Tentang" needHover={true} className="w-[4.5rem]"/>
+                  <Navlink to={`${getToken ? '/dashboard' : '/login' }`} children={`${getToken ? 'Dashboard' : 'Login' }`} needHover={false} className=" text-white p-2 rounded-md" />
                 </div>
                 <span className={`bg-black absolute left-0 right-0 -top-10 bottom-0 z-40 ${isNav ? 'opacity-50' : 'hidden'}`}></span>
               </>
