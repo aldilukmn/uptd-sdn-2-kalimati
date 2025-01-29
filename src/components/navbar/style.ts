@@ -4,7 +4,10 @@ export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
-  '& .MuiSwitch-switchBase': {
+  position: 'fixed',
+  bottom: '0',
+  right: '0',
+'& .MuiSwitch-switchBase': {
     margin: 1,
     padding: 0,
     transform: 'translateX(6px)',
@@ -27,8 +30,8 @@ export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
   '& .MuiSwitch-thumb': {
     backgroundColor: '#001e3c',
-    width: 32,
-    height: 32,
+    width: 33,
+    height: 33,
     '&::before': {
       content: "''",
       position: 'absolute',

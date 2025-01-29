@@ -55,7 +55,7 @@ function Gtk() {
   return (
     <>
       <section>
-        <h1 className="font-bold text-2xl text-center mt-10 mb-10">Guru dan Tenaga Kependidikan</h1>
+        <h1 className="font-bold md:text-xl text-center mt-10 mb-10">Guru dan Tenaga Kependidikan</h1>
         {
           isLoading ? (
             <Skeleton className="md:w-80 mx-auto py-6 dark:bg-white"/>
