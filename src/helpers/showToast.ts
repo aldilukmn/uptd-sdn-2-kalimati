@@ -6,7 +6,7 @@ const showToast = (msg: string, status: 'success' | 'error') => {
     position: "top-right",
     autoClose: 2000,
     closeButton: false,
-    className: 'w-fit sm:top-0 top-5 sm:right-0 right-5 rounded'
+    className: 'w-fit sm:top-0 top-5 sm:right-0 right-5 rounded dark:bg-black dark:text-white'
   });
 }
 
