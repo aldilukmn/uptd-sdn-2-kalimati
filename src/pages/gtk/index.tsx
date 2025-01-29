@@ -58,7 +58,7 @@ function Gtk() {
         <h1 className="font-bold text-2xl text-center mt-10 mb-10">Guru dan Tenaga Kependidikan</h1>
         {
           isLoading ? (
-            <Skeleton className="md:w-80 mx-auto py-6"/>
+            <Skeleton className="md:w-80 mx-auto py-6 dark:bg-white"/>
           ) : (
             headOfSchool && (
               <div className="mb-5 md:w-80 mx-auto text-white" onClick={toggleHead}>
@@ -74,7 +74,7 @@ function Gtk() {
         }
         {
           isLoading ? (
-            <Skeleton className="py-40"/>
+            <Skeleton className="py-40 dark:bg-white"/>
           ) : (
             <div className="text-white grid md:grid-cols-3 lg:grid-cols-4 gap-5">
             {

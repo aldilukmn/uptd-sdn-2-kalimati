@@ -1,4 +1,5 @@
-import { Icon } from '@iconify/react/dist/iconify.js'
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Tentang() {
   return (
@@ -11,11 +12,11 @@ function Tentang() {
         <section className="mt-8 mb-5 bg-green rounded-xl p-4 lg:w-2/4 md:w-3/4 mx-auto">
           <h1 className="text-2xl font-semibold mb-2">Kontak</h1>
           <figcaption className='flex items-center gap-2 mb-3'>
-            <Icon icon="ic:baseline-whatsapp" width={20} />
+            <WhatsAppIcon/>
             <p>+628-1324718895</p>
           </figcaption>
           <figcaption className='flex items-center gap-2'>
-            <Icon icon="ic:outline-email" width={20} />
+            <MailOutlineIcon/>
             <p>uptdsdnegeri2kalimati@gmail.com</p>
           </figcaption>
         </section>

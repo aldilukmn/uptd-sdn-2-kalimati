@@ -73,7 +73,7 @@ function Login() {
         <div className="relative">
           <input placeholder="Password" id="password" name="password" type={`${seePassword ? 'text' : 'password'}`} className="w-full p-2 tracking-widest rounded-md outline-blue-soft mb-8" onChange={handleOnChange} value={password}>
           </input>
-          <span onClick={handleSeePassword}>
+          <span onClick={handleSeePassword} className="text-black">
             {
               seePassword ? (
                 <RemoveRedEyeIcon className="absolute right-3 top-2 cursor-pointer"/>
@@ -83,7 +83,7 @@ function Login() {
             }
           </span>
         </div>
-        <button className={`w-full py-2 rounded-md tracking-widest font-bold hover:bg-gray-200 ${!username || !password || isLoading ? 'cursor-not-allowed bg-gray-200' : 'bg-white'}`} disabled={!username || !password || isLoading}>{isLoading ? 'Loading ...' : 'Login'}</button>
+        <button className={`w-full text-black py-2 rounded-md tracking-widest font-bold hover:bg-gray-200 ${!username || !password || isLoading ? 'cursor-not-allowed bg-gray-200' : 'bg-white'}`} disabled={!username || !password || isLoading}>{isLoading ? 'Loading ...' : 'Login'}</button>
       </form>
     </>
   )

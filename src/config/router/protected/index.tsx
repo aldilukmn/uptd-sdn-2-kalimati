@@ -5,8 +5,8 @@ import { RoleType } from '../../../models';
 import { jwtDecode } from 'jwt-decode';
 
 const Protected: React.FC<ProtectedType> = ({children}) => {
-  const nameToken: string = 'access_token'
-  const getToken: string = localStorage.getItem(nameToken) as string;
+  const tokenName: string = 'access_token'
+  const getToken: string = localStorage.getItem(tokenName) as string;
   if (!getToken) {
     return <Navigate to='/login'/>
   }
@@ -22,7 +22,7 @@ const Protected: React.FC<ProtectedType> = ({children}) => {
   } catch (e) {
     if (e instanceof Error) {
       console.error("invalid token format", e.message);
-      localStorage.clear();
+      localStorage.removeItem(tokenName);
       return <Navigate to='/login'/>;
     }
   }

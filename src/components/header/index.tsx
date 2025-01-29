@@ -10,7 +10,8 @@ import { AppDispatch } from "../../redux/store";
 import { setToastMessage } from "../../redux/action/toast";
 
 function Header() {
-  const getToken = localStorage.getItem('access_token') as string;
+  const tokenName: string = 'access_token';
+  const getToken = localStorage.getItem(tokenName) as string;
   const decodedUser: RoleType = jwtDecode(getToken);
   const [user, setUser] = useState('');
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -27,7 +28,7 @@ function Header() {
     setAnchorEl(null);
     const user = await handleUser.doLogout(getToken);
     dispatch(setToastMessage(user.status.message));
-    localStorage.clear();
+    localStorage.removeItem(tokenName);
     navigate('/login');
   }
   useEffect(() => {

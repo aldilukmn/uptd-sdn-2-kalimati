@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+
+@layer base {
+  body {
+    @apply bg-white text-black;
+  }
+
+  body.dark {
+    @apply bg-gray-900 text-white;
+  }
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
